@@ -1,19 +1,33 @@
 #!/usr/bin/python3
-"""Square module - assigns size of the square and
-checks for type and value"""
+"""Documentation for a square class"""
 
 
-class Square:
-    """defines a square with private instance attribute size"""
+class Square():
+    """Square class for a quadrilateral with four equal sides"""
+
     def __init__(self, size=0):
-        """assigns size of the square and checks for type and value"""
-        
+        """Sets the initial size values upon instantiation of the class"
+           Throws errors if the value passed in is not an integer
+
+        Args:
+          size (int, optional): the size of the square object
+
+        Raises:
+          TypeErrror: when the value passed in is not an integer
+          ValueError: when the value passed in is less than 0
+        """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = int(size)
+        else:
+            self.__size = size
 
     def area(self):
-        """public instance method returns current sqr area"""
+        """Returns the area of the square
+
+        Returns:
+           The area of the square
+        """
         return self.__size ** 2

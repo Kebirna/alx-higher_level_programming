@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-"""Documentation for read_file location"""
+#!/usr/bin/python3 """Documentation for read_file location"""
 
 def read_file(filename=""):
     """Function that reads the file and prints its contents to stdout
